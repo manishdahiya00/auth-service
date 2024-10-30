@@ -1,6 +1,9 @@
 import express, { NextFunction, Request, Response } from "express";
+import "reflect-metadata";
 import logger from "./config/logger";
 import createHttpError, { HttpError } from "http-errors";
+import authRouter from "./routes/auth";
+
 const app = express();
 
 app.get("/", async (req, res, next) => {
@@ -8,6 +11,7 @@ app.get("/", async (req, res, next) => {
     next(err);
 });
 
+app.use("/auth", authRouter);
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
     logger.error(err.message);
