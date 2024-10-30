@@ -1,4 +1,9 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, {
+    NextFunction,
+    Request,
+    RequestHandler,
+    Response,
+} from "express";
 import { AuthController } from "../controllers/AuthController";
 import { UserService } from "../services/UserService";
 import { AppDataSource } from "../config/data-source";
@@ -9,6 +14,8 @@ import { TokenService } from "../services/TokemService";
 import { RefreshToken } from "../entity/RefreshToken";
 import loginValidator from "../validators/login-validator";
 import { CredentialService } from "../services/CredentialService";
+import authenticate from "../middlewares/authenticate";
+import { AuthRequest } from "../types";
 
 const router = express.Router();
 const userRepository = AppDataSource.getRepository(User);
@@ -23,6 +30,7 @@ const authController = new AuthController(
     credentialService,
 );
 
+// Register route
 router.post(
     "/register",
     registerValidator,
@@ -31,11 +39,21 @@ router.post(
     },
 );
 
+// Login route
 router.post(
     "/login",
     loginValidator,
     (req: Request, res: Response, next: NextFunction) => {
         authController.login(req, res, next);
+    },
+);
+
+// Self route
+router.get(
+    "/self",
+    authenticate as RequestHandler,
+    (req: Request, res: Response) => {
+        authController.self(req as AuthRequest, res);
     },
 );
 

@@ -1,0 +1,10 @@
+{
+    "keys": [
+        {
+            "kty": "RSA",
+            "use": "sig",
+            "n": "AJgSdq1jFbdiw_EPCtLXnTkGV6yOhwCWd9yp5fHom6xSgT2gxXjlOPz3FmH0C214KgOXi5rC8bKFjVlvG7mNwUhtlARtvdyyglRKHN8RdePZ91UifA1f8LxpWTDRnpFspssJTscnH8qpOszPo-sXNWc1hlRZugipFQpGA0gO1BJrr5enunN2GyRDDlgHVGk3fCM6WRsJ81eQO2blTgpT7l3HNWr4QS53GRgNyxcni2CdplJsSL2F54uTrhnX9IVv48E_cX5p4mg1BJ6hRt_y8PW1VfuPAaeJsoRuXul7CvPcm0TtvnVaJ9w0frUPUngg2rg9ZZqwCPEZdJajmKXB4xMH6_iC4ynbnAZ3bAbsX5VV582y1sJaLQslDM2IJMNHot1XGRcmYfM_SoriPdZXQb9aVobfFZYVU0VRwKSr4rU2QkbgFFN89sV28Qjt4PIqVhv8ErT7soX5S6JvsKD5NSVGMqjDAjN6n4x2Iaskue5B5q6mVqsLNsMSACw4THVCFiD1cq8Du_O1Ye3J-OUACrPdm14kmNGD1JhcbEI-yedcLSCC8S4AmvF3zolQwY8stNiP-KfbOrhPeorzcX3oBVlGTIjfXKQpS8bsfx5izmnngfJjxh5URgFeiY0xqeqSeITPu7IU_s0zTlsLVeF4ozlwC9qZNQruOBlnCyUvww4B",
+            "e": "AQAB"
+        }
+    ]
+}
