@@ -7,8 +7,8 @@ try {
     app.listen(PORT, () =>
         logger.info("Server listening on port ", { port: PORT }),
     );
-} catch (error) {
-    console.log(error);
+} catch (err) {
+    console.log(err);
     process.exit(1);
 }
 
